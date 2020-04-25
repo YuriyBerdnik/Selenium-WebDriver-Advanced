@@ -9,14 +9,14 @@ class SorentoPage extends BasePage {
     }
 
     sorentoPageShouldBeVisible() {
-        this.waitForVisibilityOf(this.mainBox, 5000);
+        this.waitForVisibilityOf(this.mainBox, 10000);
         return this.mainBox.isDisplayed().then(function (isDisplayed) {
             return expect(isDisplayed).to.be.true;
         })
     };
 
     notificationShouldBeVisible() {
-        this.waitForVisibilityOf(this.notification, 5000);
+        this.waitForVisibilityOf(this.notification, 10000);
         return this.notification.isDisplayed().then(function (isDisplayed) {
             return expect(isDisplayed).to.be.true;
         })

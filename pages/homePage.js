@@ -1,5 +1,4 @@
 const BasePage = require('./basePage');
-// const provider = require('./pageObject');
 
 class HomePage extends BasePage {
     constructor() {

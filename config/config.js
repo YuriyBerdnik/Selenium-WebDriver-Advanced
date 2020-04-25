@@ -5,13 +5,14 @@ exports.config = {
     framework: 'jasmine',
     seleniumAddress: 'http://localhost:4444/wd/hub',
     specs: ['../spec/*.js'],
+    ignoreUncaughtException: true,
     capabilities: {
 		browserName: yargs.browser || 'chrome',
 		chromeOptions: {
 			// args: ['no-sandbox', 'headless', 'disable-gpu'],
 		},
 		shardTestFiles: yargs.instances > 1,
-		maxInstances: yargs.instances || 5,
+		maxInstances: yargs.instances || 1,
     },
     disableChecks: true,  
     onPrepare: function () {
