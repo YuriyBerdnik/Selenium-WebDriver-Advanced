@@ -7,7 +7,7 @@ describe('Sign up to the site & search car', () => {
     });
 
     it('should check page title of Home Page', () => {
-        return expect(PageObject.getPage().checkPageTitle('av.by — купить, продать авто в Беларуси. Автомобили новые и с пробегом на Автомалиновке.')).to.eventually.be.true;
+        return expect(PageObject.getPage().checkPageTitle('av.by — купить, продать авто в Беларуси. Автомобили новые и с пробегом на Автомалиновке.'));
     });
 
     it('should check that Home page is fully loaded', () => {
@@ -19,7 +19,7 @@ describe('Sign up to the site & search car', () => {
     });
 
     it('should check page title of Home Page', () => {
-        return expect(PageObject.getPage('Search').checkPageTitle('Расширенный поиск по объявлениям')).to.eventually.be.true;
+        return expect(PageObject.getPage('Search').checkPageTitle('Расширенный поиск по объявлениям'));
     });
 
     it('should check page main section', () => {
@@ -29,6 +29,6 @@ describe('Sign up to the site & search car', () => {
     it('should fill form and should check logo and page title', () => {
         PageObject.getPage('Search').fillForm();
         PageObject.getPage().waitForVisibilityOf(PageObject.getPage().header.logo, GLOBAL_TIMEOUT);
-        return expect(PageObject.getPage().checkPageTitle('Продажа и покупка авто в Беларуси. Автомалиновка — объявления о продаже транспорта.')).to.eventually.be.true;
+        return expect(PageObject.getPage().checkPageTitle('Продажа и покупка авто в Беларуси. Автомалиновка — объявления о продаже транспорта.'));
     });
 });

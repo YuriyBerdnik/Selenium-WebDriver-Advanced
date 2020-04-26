@@ -26,7 +26,7 @@ class BasePage {
 
     
     clickToElement(element) {
-        return this.highlight(element.click());
+        return element.click();
     }
 
     setElementValue(element, value) {
